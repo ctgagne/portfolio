@@ -274,10 +274,17 @@ h3:first-of-type {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
   }
-
   h3:first-of-type {
     padding-top: 22rem;
     margin-top: -22rem;
+  }
+  .curryon-flipped {
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    display: flex;
+    width: 100%;
+    height: 50%;
   }
 }
 </style>
