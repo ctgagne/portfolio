@@ -118,7 +118,7 @@ h4 {
 }
 
 #portfolio {
-  padding: 2rem auto 3rem auto;
+  padding: 3rem;
   margin: 0 auto;
   background: rgb(249, 247, 249);
   background: linear-gradient(
@@ -133,11 +133,11 @@ h4 {
 }
 
 #skills {
-  margin: 4rem auto 2rem;
+  padding: 3rem;
 }
 
 #contact {
-  padding: 2rem 0 3rem 0;
+  padding: 3rem;
   margin: 0 auto;
   background: rgb(249, 247, 249);
   background: linear-gradient(

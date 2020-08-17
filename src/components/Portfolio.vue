@@ -13,12 +13,31 @@
         <transition name="appear">
           <div class="curryon-flipped" v-if="curryonhover">
             <div class="site-code">
-              <a href="https://objectivelysubjectivepodcast.com">Site</a>
-              <a href="#">Code</a>
+              <a href="https://loving-feynman-16214a.netlify.app/">Site</a>
+              <a href="https://github.com/chrisfrie/curry-on">Code</a>
             </div>
           </div>
         </transition>
       </div>
+
+      <h3>Curry On! Food Challenge App</h3>
+      <div
+        id="card"
+        class="ergo"
+        @mouseover="hover = true"
+        @mouseleave="hover = false"
+      >
+        <div class="screen-shot"></div>
+        <transition name="appear">
+          <div class="ergo-flipped" v-if="hover">
+            <div class="site-code">
+              <a href="https://ergo-lazar.netlify.app">Site</a>
+              <a href="https://github.com/ctgagne/ergo-lazar">Code</a>
+            </div>
+          </div>
+        </transition>
+      </div>
+      <h3>Praxis fur Ergotherapie - Sophie Lazar</h3>
 
       <div
         id="card"
@@ -31,28 +50,14 @@
           <div class="ergo-flipped" v-if="objhover">
             <div class="site-code">
               <a href="https://objectivelysubjectivepodcast.com">Site</a>
-              <a href="#">Code</a>
+              <a href="https://github.com/ctgagne/objectively-subjective"
+                >Code</a
+              >
             </div>
           </div>
         </transition>
       </div>
-
-      <div
-        id="card"
-        class="ergo"
-        @mouseover="hover = true"
-        @mouseleave="hover = false"
-      >
-        <div class="screen-shot"></div>
-        <transition name="appear">
-          <div class="ergo-flipped" v-if="hover">
-            <div class="site-code">
-              <a href="https://ergo-lazar.netlify.app">Site</a>
-              <a href="#">Code</a>
-            </div>
-          </div>
-        </transition>
-      </div>
+      <h3>The Objectively Subjective Podcast</h3>
     </div>
   </div>
 </template>
@@ -74,17 +79,17 @@ export default {
 .card-grid {
   max-width: 60rem;
   margin: 0 auto;
-  display: grid;
-  grid-gap: 25px;
-  grid-template-columns: 450px 515px;
-  grid-template-rows: 290px 290px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 #card {
   display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   border-radius: 1rem;
+  margin: 2rem;
+  margin-top: 3rem;
 }
 
 .curryon {
@@ -92,19 +97,13 @@ export default {
   display: flex;
   justify-content: center;
   align-content: center;
-  grid-column: 1;
-  grid-row: 1 / span 2;
-  place-content: center;
   overflow: visible;
-  margin-left: -16px;
 }
 
 .obj {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  grid-column: 2;
-  overflow: hidden;
+  width: 533px;
+  height: 300px;
   background-image: url("~@/assets/objectivelyss2.png");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -114,12 +113,13 @@ export default {
   -moz-box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.25);
 }
+
 .ergo {
   display: flex;
   justify-content: center;
   align-content: center;
-  grid-column: 2;
-  grid-row: 1;
+  width: 533px;
+  height: 300px;
   overflow: hidden;
   background-image: url("~@/assets/ergo-lazar.png");
   background-size: 100%;
@@ -196,7 +196,7 @@ export default {
 }
 
 .curryon :nth-child(2) {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 h1 {
@@ -210,10 +210,26 @@ h1 {
 h5 {
   padding: -1rem;
   text-align: center;
-  font-weight: 300;
-  font-size: 1.5rem;
+  font-weight: 200;
+  font-size: 1.25rem;
   padding-bottom: 2rem;
-  font-family: "", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+h3 {
+  padding: 1rem;
+  font-family: "Poppins";
+  font-weight: 400;
+  margin-top: -2rem;
+  border: 1px solid rgba(22, 140, 204, 0.2);
+  background-color: rgba(22, 140, 204, 0.1);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+h3:first-of-type {
+  padding-top: 4rem;
+  margin-top: -5rem;
 }
 
 .appear-enter-active,

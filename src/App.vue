@@ -70,6 +70,7 @@ a:visited {
   font-weight: bold;
   color: var(--dark-text);
   padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
 }
 a:hover {
   text-decoration: underline;
@@ -105,6 +106,7 @@ li {
 
 .navigation-menu-desktop li:nth-child(3) a {
   border: 1px solid var(--primary-color);
+  text-decoration: none;
 }
 
 .navigation-menu-desktop li {
