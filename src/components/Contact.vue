@@ -61,6 +61,7 @@ h1 {
 
 .contact-me-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -84,7 +85,7 @@ p {
 }
 
 img {
-  width: 500px;
+  max-width: 500px;
 }
 
 .pulse {
@@ -170,6 +171,15 @@ a:hover {
   100% {
     box-shadow: 0 0 0 0 rgba(0, 98, 255, 0);
     background-color: var(--dark-text);
+  }
+}
+
+@media (max-width: 550px) {
+  img {
+    display: none;
+  }
+  .contact-me {
+    text-align: center;
   }
 }
 </style>

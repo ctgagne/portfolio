@@ -239,4 +239,45 @@ h3:first-of-type {
 .appear-enter, .appear-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+@media (max-width: 550px) {
+  #card {
+    margin: 0.5rem;
+    margin-top: 1rem;
+  }
+  .ergo {
+    width: calc(350px - 16px);
+    height: 188px;
+    padding: 0;
+    margin: 0;
+  }
+  .obj {
+    width: calc(350px - 16px);
+    height: 188px;
+    padding: 0;
+    margin: 0;
+  }
+  .curryon {
+    width: 188px;
+    height: calc(350px - 16px);
+    padding: 0;
+    margin: 0;
+  }
+  h3 {
+    padding: 1rem;
+    font-family: "Poppins";
+    font-weight: 400;
+    margin-top: -0.7rem;
+    font-size: 1rem;
+    border: 1px solid rgba(22, 140, 204, 0.2);
+    background-color: rgba(22, 140, 204, 0.1);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  h3:first-of-type {
+    padding-top: 22rem;
+    margin-top: -22rem;
+  }
+}
 </style>

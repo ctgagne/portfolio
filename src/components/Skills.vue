@@ -78,6 +78,7 @@ h4 {
 
 .skill-card-grid {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -111,5 +112,11 @@ h4 {
 
 #skills h4:nth-of-type(2) {
   margin-top: 2rem;
+}
+
+@media (max-width: 495px) {
+  h4 {
+    width: 90%;
+  }
 }
 </style>

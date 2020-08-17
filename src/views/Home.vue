@@ -150,4 +150,40 @@ h4 {
     rgba(249, 247, 249, 0) 100%
   );
 }
+
+@media (max-width: 768px) {
+  .world-map {
+    display: none;
+  }
+  .home {
+    padding: 1rem;
+    padding-top: 10rem;
+  }
+  #portfolio {
+    padding: 0;
+  }
+  #skills {
+    padding: 0.5rem;
+  }
+  #contact {
+    padding: 1rem;
+  }
+  .hero {
+    margin: 0;
+    padding: 0.5rem;
+  }
+  .home-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
 </style>

@@ -86,7 +86,6 @@ header {
   background-color: rgba(240, 239, 241, 0.3);
   z-index: 999;
   background-image: url("~@/assets/topography.svg");
-  background-size: 30%;
 }
 
 #nav {
@@ -95,6 +94,7 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0.5rem 2rem;
 }
@@ -143,5 +143,13 @@ footer {
   z-index: 999;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
+}
+
+@media (max-width: 550px) {
+  #nav {
+    justify-content: center;
+    padding-bottom: 1rem;
+    background-color: rgba(240, 239, 241, 0.7);
+  }
 }
 </style>
