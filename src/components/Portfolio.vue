@@ -5,6 +5,24 @@
     <div class="card-grid">
       <div
         id="card"
+        class="cdd"
+        @mouseover="hover = true"
+        @mouseleave="hover = false"
+      >
+        <div class="screen-shot"></div>
+        <transition name="appear">
+          <div class="cdd-flipped" v-if="hover">
+            <div class="site-code">
+              <a href="https://cartoondumpsterdive.com">Site</a>
+              <a href="https://github.com/ctgagne/cartoondumpsterdive">Code</a>
+            </div>
+          </div>
+        </transition>
+      </div>
+      <h3>Cartoon Dumpster Dive Podcast</h3>
+
+      <div
+        id="card"
         class="curryon"
         @mouseover="curryonhover = true"
         @mouseleave="curryonhover = false"
@@ -150,6 +168,42 @@ export default {
   border-radius: 1rem;
 }
 
+.cdd {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 534px;
+  height: 299px;
+  overflow: hidden;
+  background-image: url("~@/assets/cddwebpage.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: center;
+  -webkit-box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cdd-flipped {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.cdd-flipped a {
+  width: 5ch;
+  height: 3ch;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--dark-text);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
 .curryon-flipped {
   position: absolute;
   top: 25%;
@@ -180,6 +234,10 @@ export default {
 }
 
 .ergo-flipped :first-child {
+  margin-right: 1rem;
+}
+
+.cdd-flipped :first-child {
   margin-right: 1rem;
 }
 
@@ -227,7 +285,7 @@ h3 {
   border-bottom-right-radius: 1rem;
 }
 
-h3:first-of-type {
+h3:nth-of-type(2) {
   padding-top: 4rem;
   margin-top: -5rem;
 }
@@ -257,12 +315,19 @@ h3:first-of-type {
     padding: 0;
     margin: 0;
   }
+  .cdd {
+    width: calc(350px - 16px);
+    height: 188px;
+    padding: 0;
+    margin: 0;
+  }
   .curryon {
     width: 188px;
     height: calc(350px - 16px);
     padding: 0;
     margin: 0;
   }
+
   h3 {
     padding: 1rem;
     font-family: "Poppins";
@@ -274,7 +339,7 @@ h3:first-of-type {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
   }
-  h3:first-of-type {
+  h3:nth-of-type(2) {
     padding-top: 22rem;
     margin-top: -22rem;
   }

@@ -120,6 +120,7 @@ h4 {
 #portfolio {
   padding: 3rem;
   margin: 0 auto;
+  padding-top: 6rem;
   background: rgb(249, 247, 249);
   background: linear-gradient(
     90deg,
