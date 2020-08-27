@@ -3,7 +3,7 @@
     <header>
       <div id="nav">
         <div class="navigation-logo">
-          <a href="/">CG</a>
+          <a href="#">CG</a>
         </div>
         <ul class="navigation-menu-desktop">
           <li>
